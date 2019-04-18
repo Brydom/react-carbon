@@ -1,12 +1,17 @@
 {
   "name": "react-carbon",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Componentized Carbon Ads.",
   "main": "build/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/Brydom/react-carbon"
   },
+  "keywords": [
+    "carbon",
+    "carbon ads",
+    "react"
+  ],
   "peerDependencies": {
     "react": "^16.6.3",
     "lodash": "^4.17.11"

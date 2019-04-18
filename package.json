@@ -1,0 +1,36 @@
+{
+  "name": "react-carbon",
+  "version": "1.0.4",
+  "description": "Componentized Carbon Ads.",
+  "main": "build/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Brydom/react-carbon"
+  },
+  "peerDependencies": {
+    "react": "^16.6.3",
+    "lodash": "^4.17.11"
+  },
+  "dependencies": {
+    "react": "^16.6.3",
+    "webpack": "^2.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch",
+    "build": "webpack"
+  },
+  "author": {
+    "name": "Brydon McCluskey",
+    "email": "brydonmccluskey@gmail.com"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.5.1"
+  }
+}

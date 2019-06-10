@@ -17246,6 +17246,7 @@ var Carbon = function (_Component) {
     _this.name = _this.props.name || "pixelmobco";
     _this.serve = _this.props.serve || "CK7I42Q7";
     _this.script = _this.props.script || null;
+    _this.placement = _this.props.placement || "";
     return _this;
   }
 

@@ -1,6 +1,6 @@
 {
   "name": "react-carbon",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Componentized Carbon Ads.",
   "main": "build/index.js",
   "repository": {
@@ -21,7 +21,6 @@
     "webpack": "^2.6.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack --watch",
     "build": "webpack"
   },

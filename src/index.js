@@ -8,6 +8,7 @@ class Carbon extends Component {
     this.name = this.props.name || "pixelmobco";
     this.serve = this.props.serve || "CK7I42Q7";
     this.script = this.props.script || null;
+    this.placement = this.props.placement || "";
   }
 
   adShowing = () => document.getElementById(`${this.name} #carbonads`) !== null;

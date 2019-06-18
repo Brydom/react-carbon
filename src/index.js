@@ -9,13 +9,15 @@ class Carbon extends Component {
     this.serve = this.props.serve || "CK7I42Q7";
     this.script = this.props.script || null;
     this.placement = this.props.placement || "";
+    this.fallback = this.props.fallback || null;
+    this.showFallback = false;
   }
 
   adShowing = () => document.getElementById(`${this.name} #carbonads`) !== null;
 
   componentDidMount = () => {
     let script = document.createElement("script");
-    script.defer = this.script ? true : false;
+    script.defer = !!this.script;
     script.async = true;
     script.id = this.script ? "" : "_carbonads_js";
     script.type = "text/javascript";
@@ -24,6 +26,10 @@ class Carbon extends Component {
       `//cdn.carbonads.com/carbon.js?serve=${this.serve}&placement=${
         this.placement
       }`;
+    script.onerror = () => {
+      this.showFallback = true;
+      this.forceUpdate();
+    };
     script.addEventListener("load", () => {
       if (!this.adShowing) _.invoke(window._carbonads, "refresh");
     });
@@ -32,6 +38,9 @@ class Carbon extends Component {
   };
 
   render() {
+    if (this.showFallback && this.fallback) {
+      return this.fallback;
+    }
     return <div id={this.name} />;
   }
 }

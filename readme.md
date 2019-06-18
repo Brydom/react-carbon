@@ -13,6 +13,7 @@ The component takes these arguments:
 `placement` - The placement ID from Carbon
 `serve` - The served ad ID from Carbon
 `script` - Loading a static script for custom ads
+`fallback` - Fallback JSX if ad cannot be loaded (e.g. due to an adblocker)
 
 ### Standard ads
 

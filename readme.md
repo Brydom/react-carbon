@@ -9,11 +9,11 @@ A React component for using both custom and standard Carbon ads.
 
 The component takes these arguments:
 
-`name` - The ID given to the wrapper
-`placement` - The placement ID from Carbon
-`serve` - The served ad ID from Carbon
-`script` - Loading a static script for custom ads
-`fallback` - Fallback JSX if ad cannot be loaded (e.g. due to an adblocker)
+- `name` - The ID given to the wrapper
+- `placement` - The placement ID from Carbon
+- `serve` - The served ad ID from Carbon
+- `script` - Loading a static script for custom ads
+- `fallback` - Fallback JSX if ad cannot be loaded (e.g. due to an adblocker)
 
 ### Standard ads
 

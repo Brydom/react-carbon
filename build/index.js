@@ -17236,6 +17236,10 @@ var Carbon = function (_Component) {
       script.id = _this.script ? "" : "_carbonads_js";
       script.type = "text/javascript";
       script.src = _this.script || "//cdn.carbonads.com/carbon.js?serve=" + _this.serve + "&placement=" + _this.placement;
+      script.onerror = function () {
+        _this.showFallback = true;
+        _this.forceUpdate();
+      };
       script.addEventListener("load", function () {
         if (!_this.adShowing) _lodash2.default.invoke(window._carbonads, "refresh");
       });
@@ -17247,12 +17251,17 @@ var Carbon = function (_Component) {
     _this.serve = _this.props.serve || "CK7I42Q7";
     _this.script = _this.props.script || null;
     _this.placement = _this.props.placement || "";
+    _this.fallback = _this.props.fallback || null;
+    _this.showFallback = false;
     return _this;
   }
 
   _createClass(Carbon, [{
     key: "render",
     value: function render() {
+      if (this.showFallback && this.fallback) {
+        return this.fallback;
+      }
       return _react2.default.createElement("div", { id: this.name });
     }
   }]);

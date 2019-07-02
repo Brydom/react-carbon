@@ -1,6 +1,8 @@
 # react-carbon
 A React component for using both custom and standard Carbon ads.
 
+**I'm no longer contributing, but, feel free to create PRs and I will be happy to review and merge.**
+
 ## Installation
 
 `npm i react-carbon --save`
